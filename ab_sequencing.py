@@ -7,8 +7,8 @@ from Bio.SeqIO.FastaIO import SimpleFastaParser
 from openpyxl import load_workbook
 from os import listdir, makedirs
 from os.path import isfile, join
-from ab_data import *
-from ab_classes import *
+from Data.ab_data import *
+from Data.ab_classes import *
 
 
 def get_fasta(path):
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     binder = Binder()
 
     # Excel template file path and name
-    template_dir = "P:\\_research group folders\\AB Antibodies and Phage Display\\_CDR analysis script"
+    template_dir = "P:\\_research group folders\\AB Antibodies and Phage Display\\_CDR analysis script\\Templates"
     wb = load_workbook(join(template_dir, "rf_template.xlsx"))
     ws_rf = wb["RF analysis"]
     ws_ub = wb["Unique binders"]
