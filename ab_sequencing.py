@@ -3,12 +3,14 @@
 # Report template
 
 from os import getcwd, system
+from Bio import BiopythonWarning
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 from openpyxl import load_workbook
 from os import listdir, makedirs
 from os.path import isfile, join
 from Data.ab_data import *
 from Data.ab_classes import *
+import warnings
 
 
 def get_fasta(path):
@@ -59,7 +61,9 @@ def scf_file_sort(ub_list, path, file_dir):
         print("No scf files detected")
 
 
-if __name__ == "__main__":
+def main():
+
+    warnings.filterwarnings('ignore', category=BiopythonWarning, module='Bio')
 
     # m = input("Mode - nt / aa: ")
     system("cls")
@@ -192,3 +196,7 @@ if __name__ == "__main__":
     # Move fasta
     for fasta in fasta_files:
         system(f'move "{fasta}" "{file_dir}" >nul')
+
+
+if __name__ == "__main__":
+    main()

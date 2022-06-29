@@ -1,6 +1,6 @@
 from Bio.Seq import Seq
 from Bio import Align
-from ab_data import *
+from Data.ab_data import *
 
 class Binder:
     def __init__(self) -> None:
@@ -81,9 +81,9 @@ class Binder:
         target_alignment = str(target_alignments[0]).split()
         
         try:
-            target_i = target_alignment[1].index("|")
-        except:
-            ValueError
+            target_i = target_alignment[1].replace('.', '|').index("|")
+        except ValueError:
+            pass
         
         alignment_len = len(target_alignment[1].strip("-"))
         target_len = len(target)
@@ -99,7 +99,7 @@ class Binder:
         #         target_i = target_i_revcomp
         #         self.revcomp = True
         
-        if alignment_len == target_len and mismatches <= 10:
+        if alignment_len == target_len and mismatches <= 6:
             return target_i
         else:
             return -1
@@ -239,9 +239,9 @@ class RF:
         target_alignments = aligner.align(seq_nt, target)
         target_alignment = str(target_alignments[0]).split()
         try:
-            target_i = target_alignment[1].index("|")
-        except:
-            ValueError       
+            target_i = target_alignment[1].replace('.', '|').index("|")
+        except ValueError:
+            pass       
         
         alignment_len = len(target_alignment[1].strip("-"))
         target_len = len(target)
