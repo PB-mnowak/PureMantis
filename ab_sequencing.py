@@ -8,8 +8,8 @@ from Bio.SeqIO.FastaIO import SimpleFastaParser
 from openpyxl import load_workbook
 from os import listdir, makedirs
 from os.path import isfile, join
-from Data.ab_data import *
-from Data.ab_classes import *
+from src.ab_data import *
+from src.ab_classes import *
 import warnings
 
 
@@ -60,13 +60,20 @@ def scf_file_sort(ub_list, path, file_dir):
         
         print("No scf files detected")
 
+def print_frame(func):
+    def inner(*args, **kwargs):
+        system("cls")
+        print('/ PureMantis \\'.center(80, '_'))
+        func(*args, **kwargs)
+        print(''.center(80, '‾'))
+    return inner
 
+@print_frame
 def main():
 
     warnings.filterwarnings('ignore', category=BiopythonWarning, module='Bio')
 
     # m = input("Mode - nt / aa: ")
-    system("cls")
     # m = "nt"
     # m = mode_select()
     m = "nt"
@@ -182,21 +189,22 @@ def main():
         for j, seq in enumerate(ub[1][1]):              # Seq IDs
             ws_ub.cell(column=i, row=11+j).value = seq
 
-    name = input("Save as: ")
-    file_dir = join(mypath, name)
-    makedirs(f'{file_dir}', exist_ok=True)
+    # name = input("Save as: ")
+    # file_dir = join(mypath, name)
+    # makedirs(f'{file_dir}', exist_ok=True)
 
     # Sort scf files
-    scf_file_sort(ub_main_cont, mypath, file_dir)
+    # scf_file_sort(ub_main_cont, mypath, file_dir)
 
     # Save results  
-    filename = join(file_dir, name + ".xlsx")
-    wb.save(filename=filename)
+    # filename = join(file_dir, name + ".xlsx")
+    # wb.save(filename=filename)
     
     # Move fasta
-    for fasta in fasta_files:
-        system(f'move "{fasta}" "{file_dir}" >nul')
+    # for fasta in fasta_files:
+    #     system(f'move "{fasta}" "{file_dir}" >nul')
 
 
 if __name__ == "__main__":
     main()
+    system('pause')

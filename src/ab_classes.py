@@ -1,6 +1,6 @@
 from Bio.Seq import Seq
 from Bio import Align
-from Data.ab_data import *
+from src.ab_data import *
 
 class Binder:
     def __init__(self) -> None:
@@ -79,6 +79,9 @@ class Binder:
 
         target_alignments = aligner.align(seq_nt, target)
         target_alignment = str(target_alignments[0]).split()
+        
+        # for target in target_alignments:
+        #     print(target)
         
         try:
             target_i = target_alignment[1].replace('.', '|').index("|")
@@ -238,6 +241,10 @@ class RF:
 
         target_alignments = aligner.align(seq_nt, target)
         target_alignment = str(target_alignments[0]).split()
+        
+        for target in target_alignments:
+            print(target)
+        
         try:
             target_i = target_alignment[1].replace('.', '|').index("|")
         except ValueError:

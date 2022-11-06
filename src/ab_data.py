@@ -66,12 +66,12 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TGGGGCCAGGGCACCCTGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGATCTGGAGGAGGTGGCTCG',
-            'start_dis': 72,
-            'end': 'TTAAATTGGTATCAGCAGAAA',
+            'start_dis': 69,
+            'end': 'TGGTATCAGCAGAAACCAGGG',
             'end_dis': 0,
             'limit': 45
             },
@@ -83,18 +83,18 @@ rf_dict = {
             'limit': 45
             },
             {
-            'start': 'TTTGCAACTTACTACTGTCAA',
+            'start': 'GATTTTGCAACTTACTACTGT',
             'start_dis': 0,
             'end': 'TTCGGCGGAGGTACCAAGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ],
         'SH_VH3-23_Vk1-39':
         [
             {
             'start': 'GCCCAGCCGGCCATG',
-            'start_dis': 81,
+            'start_dis': 78,
             'end': 'TGGGTCCGCCAGGCT',
             'end_dis': 0,
             'limit': 45
@@ -111,12 +111,12 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TGGGGCCAGGGCACCCTGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGATCTGGAGGAGGTGGCTCG',
-            'start_dis': 72,
-            'end': 'TTAAATTGGTATCAGCAGAAA',
+            'start_dis': 69,
+            'end': 'TGGTATCAGCAGAAACCAGGG',
             'end_dis': 0,
             'limit': 45
             },
@@ -128,11 +128,11 @@ rf_dict = {
             'limit': 45
             },
             {
-            'start': 'TTTGCAACTTACTACTGTCAA',
+            'start': 'GATTTTGCAACTTACTACTGT',
             'start_dis': 0,
             'end': 'TTCGGCGGAGGTACCAAGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ],
     'AI_VH3-23_Vk3-20': 
@@ -156,7 +156,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TGGGGCCAGGGCACCCTGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGATCTGGAGGAGGTGGCTCG',
@@ -177,7 +177,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TTCGGCGGAGGTACCAAGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ],
     'AI_VH3-23_Vk1-39':
@@ -201,7 +201,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TGGGGCCAGGGCACCCTGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGATCTGGAGGAGGTGGCTCG',
@@ -222,7 +222,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TTCGGCGGAGGTACCAAGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ],
     'AI_VH1-69_Vk3-20':
@@ -246,7 +246,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TGGGGCCAAGGAACCCTGGTC',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGATCTGGAGGAGGTGGCTCG',
@@ -267,7 +267,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TTCGGCCAAGGGACCAAGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ],
     'AI_VH1-69_Vk1-39':
@@ -291,7 +291,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TGGGGCCAAGGAACCCTGGTC',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGATCTGGAGGAGGTGGCTCG',
@@ -312,7 +312,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TTCGGCGGAGGTACCAAGGTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ],
     'PureLibra':
@@ -336,7 +336,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'GACCCCTGGGGCCAGGGAACCCTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             },
             {
             'start': 'GGCAGCGGCGGTGGCGGGTCG',
@@ -357,7 +357,7 @@ rf_dict = {
             'start_dis': 0,
             'end': 'TTTGGCCAGGGGACCAAGCTG',
             'end_dis': 0,
-            'limit': 60
+            'limit': 75
             }
         ]    
     }
