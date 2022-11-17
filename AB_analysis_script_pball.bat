@@ -1,1 +1,2 @@
+del /f /q "P:\_research group folders\AB Antibodies and Phage Display\_CDR analysis script\src\__pycache__" > nul
 python "P:\_research group folders\AB Antibodies and Phage Display\_CDR analysis script\ab_sequencing.py"
