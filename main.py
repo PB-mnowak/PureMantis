@@ -3,9 +3,8 @@ from os.path import isfile, join, dirname, abspath
 from warnings import filterwarnings
 from collections import Counter
 
-from Bio import BiopythonWarning
+from Bio import SeqIO, BiopythonWarning
 from Bio.Seq import Seq
-from Bio import SeqIO
 from openpyxl import load_workbook
 from typing import NamedTuple
 
@@ -288,16 +287,12 @@ def write_ubs(ws_ubs, unique_binders):
             ws_ubs.cell(column=i, row=j+3).value = rfs_split[j]
         ws_ubs.cell(column=i, row=9).value = ub[1][0]  # Number of seqs
         for j, seq_record in enumerate(ub[1][1]): # Seq IDs
-            print(seq_record)
             ws_ubs.cell(column=i, row=11+j).value = seq_record[0]
 
 
 def move_files(files, target_dir):
     for file in files:
         system(f'move "{file}" "{target_dir}" >nul')
-
-
-
 
 
 if __name__ == "__main__":
